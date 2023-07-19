@@ -23,7 +23,6 @@ void calc_dist(int x, int metro){
     for(int i=1; i<=n[metro]; i++){
         dist[i]=0;
     }
-
     dfs(x, 0, metro);
 }
 
