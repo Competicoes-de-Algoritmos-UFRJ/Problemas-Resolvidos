@@ -13,7 +13,7 @@ int main(){
 
         vector<int> v;
 
-        //para esse problema precisamos saber quem é o maior valor e o segundo maior valor
+        //para esse problema, precisamos saber quem é o maior valor e o segundo maior valor da sequência
         int maior = 0, seg_maior = 0;
 
         for(int j=0; j<n; j++){
