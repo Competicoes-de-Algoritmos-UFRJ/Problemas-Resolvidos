@@ -1,4 +1,4 @@
-//https://neps.academy/br/exercise/1486 - Zero para Cancelar
+//https://neps.academy/br/exercise/241 - Campo Minado
 
 #include <bits/stdc++.h>
 
@@ -6,26 +6,30 @@ using namespace std;
 
 #define endl '\n'
 
+const int mxn = 50+5;
+
+int v[mxn];
+
 int main(){
     ios_base::sync_with_stdio(false), cin.tie(nullptr);
 
     int n;
     cin >> n;
 
-    vector<int> v;
+    for(int i=0; i<n; i++){
+        cin >> v[i];
+    }
 
     for(int i=0; i<n; i++){
-        int x;
-        cin >> x;
+        int cont = 0;
 
-        if(x>0) v.push_back(x);
-        else v.pop_back();
-    }
+        if(v[i]==1) cont++;
+        
+        if(i>0 && v[i-1]==1) cont++;
 
-    int soma = 0;
-    for(int i:v){
-        soma+=i;
+        if(i<n-1 && v[i+1]==1) cont++;
+
+        cout << cont << endl;
     }
-    cout << soma << endl;
     return 0;
 }
