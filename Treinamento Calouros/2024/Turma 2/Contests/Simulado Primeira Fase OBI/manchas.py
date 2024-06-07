@@ -24,12 +24,11 @@ n, m = [int(i) for i in input().split()]
 
 ma = []
 
-vis = [[0 for j in range(m)] for i in range(n)] #criando matriz NxM com zeros
-
 for i in range(n):
     linha = [int(i) for i in input().split()]
-
     ma.append(linha)
+
+vis = [[0 for j in range(m)] for i in range(n)] #criando matriz NxM com todas as posições iguais a zero
 
 resp = 0
 
